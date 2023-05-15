@@ -1,0 +1,12 @@
+##
+GET http://localhost:4545/api/v1/
+
+
+
+POST http://localhost:4545/api/v1/create
+Content-Type: application/json
+{
+    "title":"Todo Homework",
+    "value":"Tommorrow i will do homework",
+    "date":"15-20-2023"
+}
