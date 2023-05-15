@@ -2,7 +2,7 @@ const crypto = require('crypto');
 let posts = [
   {
     "id": "ce9d2b1d6fe80ea07087",
-    "title": "chhatra birthday",
+    "title": "admin birthday",
     "value": "Tommorrow i will make cake",
     "date": "15-20-2023"
   },
@@ -10,7 +10,7 @@ let posts = [
         "id": "ce9d2b1d6fe80ea09089",
     "title": "Todo Homework",
     "value": "Tommorrow i will do homework",
-    "date": "15-20-2023"
+    "date": "20-20-2023"
     }
 ]
 
