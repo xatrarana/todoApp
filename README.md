@@ -34,7 +34,9 @@ Install the dependencies: npm install.
 Start the development server: npm run dev.
 Make sure the backend server is running before starting the frontend application.
 
-## Usage Once both the backend and frontend are running, you can access the Note Application in your browser. The application allows you to perform the following actions:
+## Usage
+Once both the backend and frontend are running, you can access the Note Application in your browser. 
+The application allows you to perform the following actions:
 
 Create a new note by entering a title and content. View existing notes, including their titles and content. Update a note by editing its title or content. Delete a note by selecting the delete option. The application provides a simple and intuitive user interface for managing your notes effectively.
 
