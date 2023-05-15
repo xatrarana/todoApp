@@ -42,7 +42,7 @@ class Service{
         }
       }
 
-      async updatePost(id,{title,value}){
+      async updatePost(id,title,value){
         try {
             const res = await this.axiosInstance.put(`/update/${id}`,{title,value})
         } catch (e) {

@@ -23,6 +23,7 @@ function Container() {
                 <img src={createSvg} alt="addBtn" />
               </div>
             </div>
+            <p>Add note</p>
           </div>
         </div>
         <div className="content-pannel">

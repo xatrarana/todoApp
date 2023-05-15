@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Wix Madefor Text', sans-serif;
-  
+  scroll-behavior: smooth;
 }
 html,body{
   width: 100%;
@@ -13,7 +13,7 @@ html,body{
 }
 
 .wrapper{
-  background-color: #646cff;
+  background-color: #141524;
   width: 100%;
   height: 100vh;
   position: relative;
@@ -21,6 +21,7 @@ html,body{
   align-items: center;
   justify-content: center;
 }
+
 .main-container{
   width: 80%;
   height: 98vh;
@@ -29,6 +30,7 @@ html,body{
   border-radius: 1rem;
   display: flex;
 }
+
 .side-bar-nav{
   /* background-color: green; */
   min-width: 7vw;
@@ -55,7 +57,11 @@ html,body{
 }
 
 
-
+.function-items > p{
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+}
 
 
 
@@ -133,10 +139,13 @@ align-items: center;
 }
 .content-title > h2{
   font-size: 5rem;
-  margin-left: 1.7rem;
+  margin-left: 0;
   font-weight: bold;
+  box-shadow: 0px 4px 4px 0px rgba(18, 18, 18, 0.189);
+  
 }
 .content-body-wrapper{
+ 
   width: 100%;
   height: 81vh;
   /* background-color: #1a1a1a; */
@@ -172,7 +181,7 @@ align-items: center;
 .content-body-item{
   height: 35vh;
   width: 17vw;
-  background-color: rgba(157, 212, 225, 0.937);
+  background-color: rgba(143, 209, 224, 0.937);
   border-radius: 0.7rem;
   display: flex;
   flex-direction: column;
@@ -217,7 +226,7 @@ align-items: center;
 }
 .btns{
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   
 }
 .btns-operation{
@@ -229,31 +238,42 @@ align-items: center;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  
 }
-.btns-operation > img{
+.hoverHint{
+  position: relative;
+}
+.hoverHint::after{
+  position: absolute;
+  content: 'update';
+  width: 4rem;
+  height: 2rem;
+  background-color: rgb(20, 25, 44);
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  top: 3rem;
+  left: -1rem;
+  color: white;
+  visibility: hidden;
+}
+.deletebtn::after{
+  
+  content: 'delete';
+  
+}
+.btns-operation:hover > .hoverHint::after{
+  visibility: visible;
+}
+.btns-operation > div > img{
   object-fit: cover;
   width: 17px;
   height: 17px;
 }
 
-/* button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} */
+
 
 .CreatePost-wrapper{
   position: absolute;
@@ -271,10 +291,11 @@ button:focus-visible {
 .cp-main-container{
   width: 25vw;
   height: 55vh;
-  background-color: rgba(180, 203, 201, 0.937);
+  background-color:white;
   padding: 1rem;
   border-radius: 1rem;
   padding-top: 2rem;
+  box-shadow: 1px 2px 0px 2px rgba(21, 33, 49, 0.126);
 }
 .cp-main-container > form{
   display: flex;

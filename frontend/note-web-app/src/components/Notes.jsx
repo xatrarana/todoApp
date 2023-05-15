@@ -32,14 +32,20 @@ function Notes() {
         
         const res = api.deletePost(_id);
         if(!res){
-            alert("error is deleting note")
+            alert("error is deleting note.")
         }
-        alert("note deleted")
+        alert("note deleted.")
       }
 
       function handleUpdate(e,id){
             e.preventDefault();
+            console.log(id,updateTitle,updateTodo)
             const res = api.updatePost(id,updateTitle,updateTodo);
+            if(!res){
+              alert("error in updating note.")
+          }
+          alert("note updated.")
+            
       }
   return (
     <>
@@ -55,20 +61,24 @@ function Notes() {
                   spellCheck="false"
                   type="text"
                   className="note-title"
-                  id="title"
+                  name="title-box"
                   defaultValue={post.title}
                   onChange={e=>setUpdatedTitle(e.target.value)}
                 />
-                <textarea spellCheck="false" className="textbox" defaultValue={post.value} 
+                <textarea spellCheck="false" name='value-box' className="textbox" defaultValue={post.value} 
                 onChange={e => setUpdateTodo(e.target.value)}></textarea>
                 <div className="bottom-func">
                   <span className="time-span">{post.date}</span>
                   <div className="btns">
-                    <div className="btns-operation" onChange={e=>handleUpdate(e,post.id)}>
+                    <div className="btns-operation" onClick={e=>handleUpdate(e,post.id)}>
+                      <div className='hoverHint'>
                       <img src={penSvg} alt="updateBtn" />
+                      </div>
                     </div>
                     <div className="btns-operation" onClick={e=>handleDelte(e,post.id)}>
+                      <div className='hoverHint deletebtn'>
                       <img src={deleteSvg} alt="delteBtn" />
+                      </div>
                     </div>
                   </div>
                 </div>

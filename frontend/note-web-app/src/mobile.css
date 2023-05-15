@@ -1,0 +1,128 @@
+@media screen and (max-width:769px) {
+    .wrapper{
+        background-color: rebeccapurple;
+        display: inline;
+    }
+    .main-container{
+        width: 100%;
+        height: 100vh;
+        background-color: aliceblue;
+        margin: 0;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .side-bar-nav{
+        /* background-color: green; */
+        width: 100%;
+        max-width: 100%;
+        height: inherit;
+        border-right: 1px solid rgba(145, 143, 143, 0.847);
+        display: flex;
+        align-items: center;
+        
+      }
+      .brand-title{
+        width: 50%;
+        height: 7vh;
+        /* background-color: yellow; */
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin-left: 3rem;
+      }
+      .brand-title > h3{
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      .function-items{
+        width: 50%;
+      }
+      .function-items > p{
+        font-size: 1.3rem;
+        display: flex;
+        justify-content: end;
+        margin-right: 3rem;
+        display: none;
+      }
+      .buttons{
+        margin-top: 0;
+        width: 100%;
+        height: 10vh;
+        /* background-color: white; */
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        
+      }
+      .buttons .create-btn{
+        width: 5rem;
+        height: 5rem;
+        background-color: #1a1a1a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: none;
+        margin-right: 3rem;
+      }
+      .content-title > h2{
+        
+        box-shadow: 0px 5px 10px 0px rgba(18, 18, 18, 0.253);
+        
+      }
+      
+      .content-body-wrapper{
+        margin-top: 1rem;
+        width: 100%;
+        height: 80vh;
+        /* background-color: #1a1a1a; */
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-y: auto;
+        padding-bottom: 0;
+        padding-left: 0;
+        position: relative;
+      }
+      ::-webkit-scrollbar {
+        width: 0px;
+      }
+      .content-body-item{
+        height: 38vh;
+        width: 80vw;
+        background-color: rgba(143, 209, 224, 0.937);
+        border-radius: 0.7rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        
+      }
+      .header .search-wrapper{
+        margin-top: 1rem;
+        width: 100%;
+        height: 7vh;
+        background-color: aliceblue;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border-radius: 0.8rem;
+        margin-left: 2rem;
+      }
+      .note-title{
+       
+        height: 5rem;
+      }
+    
+      /* ///for the note form */
+      .cp-main-container{
+        width: 90vw;
+        height: 55vh;
+        background-color:white;
+        padding: 1rem;
+        border-radius: 1rem;
+        padding-top: 2rem;
+        box-shadow: 1px 2px 0px 2px rgba(21, 33, 49, 0.126);
+      }
+}
