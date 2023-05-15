@@ -1,6 +1,8 @@
 # Note Application 
 This is a simple web application that allows users to create, view, update, and delete notes. The application consists of a RESTful API built with Node.js and Express.js for the backend, and a Vite React application for the frontend. The application does not use a database and instead stores the notes in an array.
 
+## Apllication is live at 
+    https://my-notes-git-main-xatrarana.vercel.app/
 ## Backend 
 The backend of the application is built using Node.js and Express.js. It provides a RESTful API to handle CRUD (Create, Read, Update, Delete) operations on notes. The backend API is responsible for processing the incoming requests from the frontend, performing the required operations on the notes array, and sending back the appropriate response.
 
