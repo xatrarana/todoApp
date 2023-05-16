@@ -2,16 +2,10 @@ const crypto = require('crypto');
 let posts = [
   {
     "id": "ce9d2b1d6fe80ea07087",
-    "title": "admin birthday",
-    "value": "Tommorrow i will make cake",
+    "title": "Note sample",
+    "value": "This is the note sample.",
     "date": "15-20-2023"
-  },
-    {
-        "id": "ce9d2b1d6fe80ea09089",
-    "title": "Todo Homework",
-    "value": "Tommorrow i will do homework",
-    "date": "20-20-2023"
-    }
+  }
 ]
 
 const homeController = async (req,res)=>{
@@ -48,8 +42,18 @@ const update = async (req, res) => {
         return res.status(404).json({ error: 'Post not found' });
       }
   
-      post.title = title ?? post.title;
-      post.value = value ?? post.value;
+     
+      if(title.length > 0){
+        post.title = title ?? post.title;
+      }
+      else if( value.length > 0){
+        post.value = value ?? post.value;
+      }
+      else if(title.length > 0 && value.length > 0){
+        post.title = title ?? post.title;
+        post.value = value ?? post.value;
+      }
+      
   
       return res.json(post);
     } catch (e) {
